@@ -2,7 +2,7 @@
 // Author : weekend27
 // Date   : 2015-11-19
 
-/********************************************************************************** 
+/**********************************************************************************
 
 Suppose a sorted array is rotated at some pivot unknown to you beforehand.
 
@@ -11,14 +11,18 @@ Suppose a sorted array is rotated at some pivot unknown to you beforehand.
 You are given a target value to search. If found in the array return its index, otherwise return -1.
 
 You may assume no duplicate exists in the array.
-         
+
 **********************************************************************************/
+
+// How to do it:
+// binary search, the difficulty is determining the left and right boundaries.
+
 class Solution {
 public:
     int search(vector<int>& nums, int target) {
         int len = nums.size();
         int low = 0, high = len;
-        
+
         while(low != high){  // error:low <= high, example:[1] search:0 wrong answer:0 expected answer:-1
             const int mid = low + (high - low) / 2;  // mid = (low + high) / 2 may encounter overflow
             if (nums[mid] == target)
