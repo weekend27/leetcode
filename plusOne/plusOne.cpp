@@ -11,7 +11,7 @@ The digits are stored such that the most significant digit is at the head of the
 **********************************************************************************/
 
 // How to do it:
-// from the rbegin to the rend, ensure iterator and carry through % and / 
+// from the rbegin to the rend, ensure iterator and carry through % and /
 
 class Solution {
 public:
@@ -24,7 +24,7 @@ private:
         int c = digit; // carry
         for(auto it = num.rbegin(); it != num.rend(); it++){
             *it += c;
-            c = *it / 10
+            c = *it / 10;
             *it %= 10;
         }
         if (c != 0)
