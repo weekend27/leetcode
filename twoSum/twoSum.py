@@ -13,6 +13,9 @@ Input: numbers={2, 7, 11, 15}, target=9
 Output: index1=1, index2=2
 '''
 
+# How to do it:
+# (1)sort; (2)two pointers: one from the beginning and the other one from the end.
+
 class Solution(object):
     def twoSum(self, num, target):
         """
@@ -34,7 +37,7 @@ class Solution(object):
                 j = j - 1
             else:
                 i = i + 1
-                
+
         i = 0
         result = []
         while i < len(num):
@@ -42,4 +45,3 @@ class Solution(object):
                 result.append(i + 1)
             i = i + 1
         return result
-        
