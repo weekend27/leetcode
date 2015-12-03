@@ -13,7 +13,9 @@ Try to come up as many solutions as you can, there are at least 3 different ways
 
 **********************************************************************************/
 
-
+// How to do it:
+// use two arrays to put the elements from two parts, and then put them back to the original array.
+// space O(n)
 
 class Solution {
 public:

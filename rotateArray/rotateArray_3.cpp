@@ -13,6 +13,8 @@ Try to come up as many solutions as you can, there are at least 3 different ways
 
 **********************************************************************************/
 
+// How to do it:
+// use a new array:numsCopy, nums[(i+k)%len] = numsCopy[i];
 
 class Solution {
 public:

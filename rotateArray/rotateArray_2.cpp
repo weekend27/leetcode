@@ -13,6 +13,8 @@ Try to come up as many solutions as you can, there are at least 3 different ways
 
 **********************************************************************************/
 
+// How to do it:
+// three reverses:(1)the whole; (2)the front part; (3)the end part.
 
 class Solution {
 public:
