@@ -13,6 +13,7 @@ Given a m x n matrix, if an element is 0, set its entire row and column to 0. Do
 // find the zero elements and make the elements in the first row and first col zero
 // find the zero elements in the first row and the first col, and then make the whole row and col zero
 // make the first row and first col zero
+// space O(1)
 
 
 class Solution {
