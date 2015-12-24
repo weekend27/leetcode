@@ -9,7 +9,7 @@ Implement pow(x, n).
 **********************************************************************************/
 
 // How to do it:
-// ref: divide and conquer
+// divide and conquer
 
 class Solution {
 public:
