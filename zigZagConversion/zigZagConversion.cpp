@@ -19,6 +19,7 @@ convert("PAYPALISHIRING", 3) should return "PAHNAPLSIIGYIR".
 
 // How to do it:
 // find the step, and process the zigzag from three parts
+// *********** I am back ***********
 
 
 class Solution {
