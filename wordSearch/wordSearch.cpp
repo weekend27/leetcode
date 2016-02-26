@@ -22,7 +22,7 @@ word = "ABCB", -> returns false.
 
 **********************************************************************************/
 
-// How to do it:
+// How to do it :
 // ref: http://bangbingsyb.blogspot.jp/2014/11/leetcode-word-search.html
 /*
 以board上的每个cell为出发点，利用depth first search向上下左右四个方向搜索匹配word。
