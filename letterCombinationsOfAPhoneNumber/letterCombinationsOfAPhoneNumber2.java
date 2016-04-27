@@ -29,9 +29,9 @@ Although the above answer is in lexicographical order, your answer could be in a
 
 假定有个数字串“23456”
 
-假定除了数字'2'外，后一串数字的组合我已经求出来了，那我只要把‘2'所代表的'abc'加到他们每一个的前面就好。所以现在只用求数字串"3456"
-假定'3'之后一串数字的组合我已经求出来了，那我只要把‘3'所代表的'def'加到他们每一个的前面就好。所以现在只用求数字串"456" ……
-一直这样推下去，直到发现6'后面是空的了，那返回它代表的每个字母就好了。
+（1）假定除了数字'2'外，后一串数字的组合我已经求出来了，那我只要把‘2'所代表的'abc'加到他们每一个的前面就好。所以现在只用求数字串"3456"
+（2）假定'3'之后一串数字的组合我已经求出来了，那我只要把‘3'所代表的'def'加到他们每一个的前面就好。所以现在只用求数字串"456" ……
+（3）一直这样推下去，直到发现6'后面是空的了，那返回它代表的每个字母就好了。
 
 *************************************************************
 
@@ -58,30 +58,26 @@ for(int k = 0;k < map[pos].length();k++)
 */
 
 
-// 递归解法
+// 队列解法
 public class Solution {
     public List<String> letterCombinations(String digits) {
-        List<String> result = new ArrayList<>();
+        LinkedList<String> result = new LinkedList<String>();
         if (digits == null || digits.length() == 0) return result;
 
-        // map array
         String[] digitletters = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
         result.add("");
 
         for (int i = 0; i < digits.length(); i++) {
-            int digit = digits.charAt(i) - '0';
-            result = combine(result, digitletters[digit]);
+            int pos = digits.charAt(i) - '0';
+            String s = digitletters[pos];
+            int size = result.size();
+            for (int j = 0; j < size; j++) {
+                String tmp = result.poll();     // retrieve the head of result and delete it
+                for (int k = 0; k < s.length(); k++) {
+                    result.add(tmp + s.charAt(k));
+                }
+            }
         }
-
-        return result;
-    }
-
-    public static List<String> combine(List<String> prev, String digit) {
-        List<String> result = new ArrayList<>();
-
-        for (int i = 0; i < digit.length(); ++i)
-            for (String x : prev)
-                result.add(x + digit.charAt(i));
 
         return result;
     }
