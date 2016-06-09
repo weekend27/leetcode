@@ -26,6 +26,7 @@ You may assume pattern contains only lowercase letters, and str contains lowerca
 如果没有在哈希表中出现，我们还要遍历一遍哈希表，看新遇到的单词是否已经是哈希表中的映射，如果没有，再跟新遇到的字符建立映射。
 */
 
+
 class Solution {
 public:
     bool wordPattern(string pattern, string str) {
